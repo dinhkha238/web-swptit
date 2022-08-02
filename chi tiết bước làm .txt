@@ -1,0 +1,38 @@
+Nguyễn Đình Khả
+------------------
+Các bước làm:
+- Tạo file navbar.js
+    - Trong navbar thêm thẻ div 'navbar' chứa 2 thẻ leftSide và rightSide
+    - Tạo file asset chứa các hình ảnh
+    - leftSide chứa logo
+    - rightSide chứa 4 đường link dẫn điều hướng đến 4 trang
+- Tạo file footer.js
+    - 1 thẻ div chứa các icon mạng xã hội và copyrighter 
+- File App.js
+    - import {Routes, Route, Switch,Link} from 'react-router-dom'
+    - Đưa thẻ Navbar với thẻ Footer vào đầu cuối để chạy xuyên suốt trang web
+    - Tạo 1 thẻ Routes để điều hướng các Route 
+* Page Home
+    - 1 thẻ div có chứa tiêu đề + thẻ Link đến page Member
+    - Thẻ div có css Background-image
+* Page Infor 
+    - 1 thẻ div có chứa tiêu đề + 1 button SEE MORE
+    - Thẻ div có css Background-image
+    - Thẻ div "Nổi bật"
+    - Chèn video <video src={video} width="100%" height="500" controls>
+     </video>
+    - Sử dụng phương thức map lấy dữ liệu từ file memberlist.js
+    - Tạo 1 file member-item.js để render dữ liệu ra màn hình
+        {MemberList.map((member,key) => {
+                return (
+                <MemberItem key={key} cs={member.cs} chucvu={member.chucvu} image={member.img} name={member.name} quoet={member.quoet}
+                />
+                );
+            })}     
+* Page member
+    - 2 thẻ div chứa hình ảnh và form thông tin
+    - Trong thẻ thông tin chứa thẻ tiêu đề và thẻ form có method = POST để đẩy dữ liệu lên server
+    - Tạo các thẻ input, label, textarea để người dùng nhập dữ liệu
+    - 1 thẻ button để nhấn gửi
+* Page contact
+    - 2 thẻ div chứa ảnh và thông tin
